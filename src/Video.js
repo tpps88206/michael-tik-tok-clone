@@ -2,16 +2,16 @@ import React, { useState, useRef } from 'react';
 import './Video.css';
 
 function Video() {
-	const [play, setPlay] = useState(false);
+	const [playing, setPlaying] = useState(false);
 	const videoRef = useRef(null);
 
 	const onVideoPress = () => {
-		if (play) {
+		if (playing) {
 			videoRef.current.pause();
-			setPlay(false);
+			setPlaying(false);
 		} else {
 			videoRef.current.play();
-			setPlay(true);
+			setPlaying(true);
 		}
 	}
 
